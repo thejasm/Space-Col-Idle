@@ -4,10 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planet Generator</title>
+    <title>Space Colony Idle</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="theme-dark">
+    <div id="rng_planet_display" class="container my-6 is-flex is-flex-direction-column is-flex-wrap-wrap is-align-content-center">
+        <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
+            <div class="planet_card my-4 mx-4">test</div>
+            <div class="planet_card my-4 mx-4">test</div>
+            <div class="planet_card my-4 mx-4">test</div>
+        </div>
+        <button id="reroll_planet" class="button is-outlined is-primary my-4">Find New System</button>
+    </div>
     <script src="js/planets.js"></script>
 </body>
 

@@ -28,7 +28,7 @@ function planet_gen(planet){
         planet.metals = 0.01;
         planet.chemicals = 1;
     } else { // Not a gas giant
-        // Generate atmosphere --------------------------------
+        // Generate atmosphere
         var seed = Math.random();
         var cumulativeRarity = 0;
         for (var i = 0; i < atmosphere_types.length; i++) {
@@ -38,7 +38,7 @@ function planet_gen(planet){
                 break;
             }
         }
-        // ---------------------------------------------------
+        // Generate other stats
         if(planet.atmosphere == 0) planet.pressure = 0;
         else planet.pressure = (Math.random()).toFixed(2);
         planet.water = (Math.random()).toFixed(2);
@@ -49,6 +49,14 @@ function planet_gen(planet){
     }
 }
 
+function planet_display(planet){
+    
+}
+
+
+
+
+// DEBUG ---------- DEBUG ---------- DEBUG ---------- DEBUG ---------- DEBUG ---------- DEBUG ---------- DEBUG ---------- DEBUG
 function printPlanet(planet) {
     if (planet) {
         console.log("Current planet properties:");
@@ -95,3 +103,4 @@ console.log("Atmosphere Type Counts:");
 for (var atmosphereName in atmosphereCounts) {
     console.log(atmosphereName + ": " + atmosphereCounts[atmosphereName] + " - " + (atmosphereCounts[atmosphereName]/100) + "%");
 }
+// DEBUG ---------- DEBUG ---------- DEBUG ---------- DEBUG ---------- DEBUG ---------- DEBUG ---------- DEBUG ---------- DEBUG
